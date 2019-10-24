@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using OtaTicketing.Agencies;
+using OtaTicketing.Parks;
 using OtaTicketing.Users;
 using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
@@ -20,6 +22,9 @@ namespace OtaTicketing.EntityFrameworkCore
     public class OtaTicketingDbContext : AbpDbContext<OtaTicketingDbContext>
     {
         public DbSet<AppUser> Users { get; set; }
+        public DbSet<Agency> Agencys { get; set; }
+        public DbSet<AgencyType> AgencyTypes { get; set; }
+        public DbSet<Park> Parks { get; set; }
 
         /* Add DbSet properties for your Aggregate Roots / Entities here.
          * Also map them inside OtaTicketingDbContextModelCreatingExtensions.ConfigureOtaTicketing

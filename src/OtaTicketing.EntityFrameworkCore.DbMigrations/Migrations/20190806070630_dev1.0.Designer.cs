@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OtaTicketing.EntityFrameworkCore;
 
 namespace OtaTicketing.Migrations
 {
     [DbContext(typeof(OtaTicketingMigrationsDbContext))]
-    partial class OtaTicketingMigrationsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190806070630_dev1.0")]
+    partial class dev10
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
